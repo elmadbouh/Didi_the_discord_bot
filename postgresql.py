@@ -5,7 +5,7 @@ connection = False
 try:
     connection = psycopg2.connect(user="postgres",
                                   password="Reibach2020+",
-                                  host="34.190.202.7",
+                                  host="35.190.202.7",
                                   port="5432",
                                   database="storage")
     cursor = connection.cursor()
