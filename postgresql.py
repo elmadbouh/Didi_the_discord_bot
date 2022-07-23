@@ -1,15 +1,13 @@
-import os
 import psycopg2
 
-
-pwd = my_secret = os.environ['db_pass']
+connection = False
 
 try:
     connection = psycopg2.connect(user="postgres",
-                                  password=pwd,
+                                  password="Reibach2020+",
                                   host="34.77.211.120",
                                   port="5432",
-                                  database="weighty-forest-355610:europe-west1:aem-gc-pg-db")
+                                  database="postgres")
     cursor = connection.cursor()
     postgreSQL_select_Query = "select * from json_dict"
 
@@ -18,6 +16,7 @@ try:
     mobile_records = cursor.fetchall()
 
     print("Print each row and it's columns values")
+    
     for row in mobile_records:
         print("Id = ", row[0], )
         print("Key = ", row[1])
