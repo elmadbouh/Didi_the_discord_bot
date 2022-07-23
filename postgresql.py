@@ -5,9 +5,9 @@ connection = False
 try:
     connection = psycopg2.connect(user="postgres",
                                   password="Reibach2020+",
-                                  host="34.77.211.120",
+                                  host="34.190.202.7",
                                   port="5432",
-                                  database="postgres")
+                                  database="storage")
     cursor = connection.cursor()
     postgreSQL_select_Query = "select * from json_dict"
 
